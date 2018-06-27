@@ -43,12 +43,12 @@ Returns all schemas except postgres' schemas.
 
 Accepts options:
 
-    :exclude_public => true
+    public: false # defaults to true
 
 Usage:
 
-    Storey.schemas
-    Storey.schemas(:exclude_public => true)
+    Storey.schemas # returns all schemas, including `public`
+    Storey.schemas(public: false) # returns all schemas except public
 
 ## default_schema?
 
